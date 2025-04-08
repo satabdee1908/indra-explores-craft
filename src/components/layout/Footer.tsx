@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="inline-block">
-              <span className="font-serif text-2xl font-bold text-turmeric">Indra</span>
-              <span className="ml-1 text-2xl font-bold text-white">Crafts</span>
+              <span className="font-serif text-2xl font-bold text-turmeric">Suryo</span>
+              <span className="ml-1 text-2xl font-bold text-white">dayaa</span>
             </Link>
             <p className="mt-4 text-sm text-gray-300">
               Connecting artisans with the world, sharing stories through crafts and travel.
@@ -63,7 +63,7 @@ const Footer = () => {
         </div>
         
         <div className="border-t border-gray-700 mt-10 pt-8 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-sm text-gray-400">© 2025 IndraCrafts. All rights reserved.</p>
+          <p className="text-sm text-gray-400">© 2025 Suryodayaa. All rights reserved.</p>
           <p className="text-sm text-gray-400 mt-4 md:mt-0">Made with ❤️ for Indian artisans</p>
         </div>
       </div>

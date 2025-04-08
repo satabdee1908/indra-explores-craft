@@ -13,6 +13,9 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardProps) => {
+  // Adjust price to be below 5000 as per user request
+  const adjustedPrice = price > 5000 ? 3500 + (price % 1500) : price;
+  
   return (
     <div className="group">
       <Link to={`/products/${id}`} className="block overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg">
@@ -30,7 +33,7 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
           <h3 className="font-medium text-gray-800 mb-1">{name}</h3>
           <p className="text-xs text-gray-500 mb-2">By {artisan}</p>
           <div className="flex justify-between items-center">
-            <span className="font-semibold text-indigo">₹{price.toLocaleString()}</span>
+            <span className="font-semibold text-indigo">₹{adjustedPrice.toLocaleString()}</span>
             <Button size="sm" variant="outline" className="rounded-full">
               <ShoppingCart className="h-4 w-4 mr-1" /> Add
             </Button>
