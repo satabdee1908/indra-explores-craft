@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Mail, Instagram, Facebook, Youtube } from "lucide-react";
 
@@ -9,8 +8,12 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
             <Link to="/" className="inline-block">
-              <span className="font-serif text-2xl font-bold text-turmeric">Suryo</span>
-              <span className="ml-1 text-2xl font-bold text-white">dayaa</span>
+              <img 
+                src="/lovable-uploads/5671dd79-f619-459f-bfe8-929751dda445.png" 
+                alt="Suryodayaa Logo" 
+                className="h-16 w-auto mb-3"
+              />
+              <p className="text-sm text-white italic">where culture meets exploration</p>
             </Link>
             <p className="mt-4 text-sm text-gray-300">
               Connecting artisans with the world, sharing stories through crafts and travel.
