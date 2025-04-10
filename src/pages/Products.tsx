@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
 import ProductCard from "@/components/product/ProductCard";
-import ProductFilters from "@/components/product/ProductFilters";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Search } from "lucide-react";
@@ -12,24 +11,9 @@ import { Search } from "lucide-react";
 import { allProducts } from "@/data/sampleData";
 
 const Products = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
-  const [activeFilters, setActiveFilters] = useState({
-    categories: [] as string[],
-    priceRange: [0, 5000] as number[],
-  });
-
-  // Initialize from URL params if available
-  useEffect(() => {
-    const category = searchParams.get("category");
-    if (category) {
-      setActiveFilters(prev => ({
-        ...prev,
-        categories: [category]
-      }));
-    }
-  }, [searchParams]);
 
   // Apply filters
   useEffect(() => {
@@ -47,25 +31,8 @@ const Products = () => {
       );
     }
     
-    // Apply category filter
-    if (activeFilters.categories.length > 0) {
-      results = results.filter(product => 
-        activeFilters.categories.includes(product.categoryId)
-      );
-    }
-    
-    // Apply price filter
-    results = results.filter(product => 
-      product.price >= activeFilters.priceRange[0] && 
-      product.price <= activeFilters.priceRange[1]
-    );
-    
     setFilteredProducts(results);
-  }, [searchQuery, activeFilters]);
-
-  const handleFilterChange = (filters: any) => {
-    setActiveFilters(filters);
-  };
+  }, [searchQuery]);
 
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(e.target.value);
@@ -99,54 +66,42 @@ const Products = () => {
           </form>
         </div>
         
-        <div className="flex flex-col lg:flex-row gap-8">
-          {/* Filters */}
-          <div className="lg:w-1/4">
-            <ProductFilters onFilterChange={handleFilterChange} />
-          </div>
-          
-          {/* Product Grid */}
-          <div className="lg:w-3/4">
-            {filteredProducts.length === 0 ? (
-              <div className="text-center py-12">
-                <h3 className="text-xl font-medium text-gray-900 mb-2">No products found</h3>
-                <p className="text-gray-600 mb-4">Try adjusting your filters or search query</p>
-                <Button 
-                  onClick={() => {
-                    setSearchQuery("");
-                    setActiveFilters({
-                      categories: [],
-                      priceRange: [0, 5000],
-                    });
-                  }}
-                  variant="outline"
-                >
-                  Clear All Filters
-                </Button>
+        {/* Product Grid */}
+        <div>
+          {filteredProducts.length === 0 ? (
+            <div className="text-center py-12">
+              <h3 className="text-xl font-medium text-gray-900 mb-2">No products found</h3>
+              <p className="text-gray-600 mb-4">Try adjusting your search query</p>
+              <Button 
+                onClick={() => {
+                  setSearchQuery("");
+                }}
+                variant="outline"
+              >
+                Clear Search
+              </Button>
+            </div>
+          ) : (
+            <>
+              <div className="flex justify-between items-center mb-6">
+                <p className="text-gray-600">{filteredProducts.length} products</p>
               </div>
-            ) : (
-              <>
-                <div className="flex justify-between items-center mb-6">
-                  <p className="text-gray-600">{filteredProducts.length} products</p>
-                  {/* We could add sorting options here in the future */}
-                </div>
-                
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredProducts.map((product) => (
-                    <ProductCard
-                      key={product.id}
-                      id={product.id}
-                      name={product.name}
-                      image={product.image}
-                      price={product.price}
-                      artisan={product.artisan}
-                      region={product.region}
-                    />
-                  ))}
-                </div>
-              </>
-            )}
-          </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                {filteredProducts.map((product) => (
+                  <ProductCard
+                    key={product.id}
+                    id={product.id}
+                    name={product.name}
+                    image={product.image}
+                    price={product.price}
+                    artisan={product.artisan}
+                    region={product.region}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </div>
     </Layout>
