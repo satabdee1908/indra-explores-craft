@@ -17,8 +17,7 @@ const Products = () => {
   const [filteredProducts, setFilteredProducts] = useState(allProducts);
   const [activeFilters, setActiveFilters] = useState({
     categories: [] as string[],
-    regions: [] as string[],
-    priceRange: [0, 15000] as number[],
+    priceRange: [0, 5000] as number[],
   });
 
   // Initialize from URL params if available
@@ -52,13 +51,6 @@ const Products = () => {
     if (activeFilters.categories.length > 0) {
       results = results.filter(product => 
         activeFilters.categories.includes(product.categoryId)
-      );
-    }
-    
-    // Apply region filter
-    if (activeFilters.regions.length > 0) {
-      results = results.filter(product => 
-        activeFilters.regions.includes(product.regionId)
       );
     }
     
@@ -124,8 +116,7 @@ const Products = () => {
                     setSearchQuery("");
                     setActiveFilters({
                       categories: [],
-                      regions: [],
-                      priceRange: [0, 15000],
+                      priceRange: [0, 5000],
                     });
                   }}
                   variant="outline"

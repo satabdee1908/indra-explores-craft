@@ -16,23 +16,14 @@ interface ProductFiltersProps {
 }
 
 const ProductFilters = ({ onFilterChange }: ProductFiltersProps) => {
-  const [priceRange, setPriceRange] = useState([0, 15000]);
+  const [priceRange, setPriceRange] = useState([0, 5000]);
   const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
-  const [selectedRegions, setSelectedRegions] = useState<string[]>([]);
   const [mobileFiltersOpen, setMobileFiltersOpen] = useState(false);
 
   const categories = [
     { id: "handicrafts", label: "Handicrafts" },
     { id: "textiles", label: "Textiles" },
     { id: "home-decor", label: "Home Decor" }
-  ];
-
-  const regions = [
-    { id: "odisha", label: "Odisha" },
-    { id: "west-bengal", label: "West Bengal" },
-    { id: "rajasthan", label: "Rajasthan" },
-    { id: "gujarat", label: "Gujarat" },
-    { id: "karnataka", label: "Karnataka" }
   ];
 
   const handleCategoryChange = (category: string) => {
@@ -43,23 +34,6 @@ const ProductFilters = ({ onFilterChange }: ProductFiltersProps) => {
       
       onFilterChange({
         categories: updated,
-        regions: selectedRegions,
-        priceRange
-      });
-      
-      return updated;
-    });
-  };
-
-  const handleRegionChange = (region: string) => {
-    setSelectedRegions(prev => {
-      const updated = prev.includes(region)
-        ? prev.filter(r => r !== region)
-        : [...prev, region];
-      
-      onFilterChange({
-        categories: selectedCategories,
-        regions: updated,
         priceRange
       });
       
@@ -71,19 +45,16 @@ const ProductFilters = ({ onFilterChange }: ProductFiltersProps) => {
     setPriceRange(value);
     onFilterChange({
       categories: selectedCategories,
-      regions: selectedRegions,
       priceRange: value
     });
   };
 
   const clearAllFilters = () => {
     setSelectedCategories([]);
-    setSelectedRegions([]);
-    setPriceRange([0, 15000]);
+    setPriceRange([0, 5000]);
     onFilterChange({
       categories: [],
-      regions: [],
-      priceRange: [0, 15000]
+      priceRange: [0, 5000]
     });
   };
 
@@ -139,34 +110,13 @@ const ProductFilters = ({ onFilterChange }: ProductFiltersProps) => {
                     </AccordionContent>
                   </AccordionItem>
                   
-                  <AccordionItem value="regions">
-                    <AccordionTrigger className="text-left">Regions</AccordionTrigger>
-                    <AccordionContent>
-                      {regions.map((region) => (
-                        <div key={region.id} className="flex items-center space-x-2 py-1">
-                          <Checkbox 
-                            id={`mobile-region-${region.id}`} 
-                            checked={selectedRegions.includes(region.id)}
-                            onCheckedChange={() => handleRegionChange(region.id)}
-                          />
-                          <label 
-                            htmlFor={`mobile-region-${region.id}`}
-                            className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                          >
-                            {region.label}
-                          </label>
-                        </div>
-                      ))}
-                    </AccordionContent>
-                  </AccordionItem>
-                  
                   <AccordionItem value="price">
                     <AccordionTrigger className="text-left">Price Range</AccordionTrigger>
                     <AccordionContent>
                       <div className="mt-6 px-2">
                         <Slider
-                          defaultValue={[0, 15000]}
-                          max={15000}
+                          defaultValue={[0, 5000]}
+                          max={5000}
                           step={500}
                           value={priceRange}
                           onValueChange={handlePriceChange}
@@ -230,31 +180,10 @@ const ProductFilters = ({ onFilterChange }: ProductFiltersProps) => {
         </div>
         
         <div className="border-t border-gray-200 pt-6">
-          <h4 className="text-sm font-medium text-gray-900 mb-3">Regions</h4>
-          <div className="space-y-2">
-            {regions.map((region) => (
-              <div key={region.id} className="flex items-center space-x-2">
-                <Checkbox 
-                  id={`region-${region.id}`} 
-                  checked={selectedRegions.includes(region.id)}
-                  onCheckedChange={() => handleRegionChange(region.id)}
-                />
-                <label 
-                  htmlFor={`region-${region.id}`}
-                  className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
-                >
-                  {region.label}
-                </label>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="border-t border-gray-200 pt-6">
           <h4 className="text-sm font-medium text-gray-900 mb-4">Price Range</h4>
           <Slider
-            defaultValue={[0, 15000]}
-            max={15000}
+            defaultValue={[0, 5000]}
+            max={5000}
             step={500}
             value={priceRange}
             onValueChange={handlePriceChange}
