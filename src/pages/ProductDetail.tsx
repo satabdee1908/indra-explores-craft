@@ -19,14 +19,12 @@ const ProductDetail = () => {
   const [artisan, setArtisan] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
-  const [activeImage, setActiveImage] = useState("");
 
   useEffect(() => {
     // In a real app, we would fetch from an API
     const foundProduct = allProducts.find(p => p.id === productId);
     if (foundProduct) {
       setProduct(foundProduct);
-      setActiveImage(foundProduct.image);
       
       // Find the artisan
       const foundArtisan = artisans.find(a => a.id === foundProduct.artisanId);
@@ -79,44 +77,17 @@ const ProductDetail = () => {
     );
   }
 
-  // For demo, create additional images from the main one
-  const productImages = [
-    product.image,
-    "https://images.unsplash.com/photo-1523380677598-64d85d4490a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1523293182086-7651a899d37f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    "https://images.unsplash.com/photo-1516476892398-bdcab4c8dab8?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80"
-  ];
-
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Product Images */}
-          <div className="space-y-4">
-            <div className="bg-white rounded-lg overflow-hidden aspect-square">
-              <img 
-                src={activeImage} 
-                alt={product.name} 
-                className="w-full h-full object-contain"
-              />
-            </div>
-            <div className="grid grid-cols-4 gap-2">
-              {productImages.map((img, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveImage(img)}
-                  className={`border rounded-md overflow-hidden aspect-square ${
-                    activeImage === img ? "border-terracotta ring-2 ring-terracotta/30" : "border-gray-200"
-                  }`}
-                >
-                  <img 
-                    src={img} 
-                    alt={`${product.name} - view ${index + 1}`} 
-                    className="w-full h-full object-cover"
-                  />
-                </button>
-              ))}
-            </div>
+          {/* Single Product Image */}
+          <div className="bg-white rounded-lg overflow-hidden aspect-square">
+            <img 
+              src={product.image} 
+              alt={product.name} 
+              className="w-full h-full object-contain"
+            />
           </div>
           
           {/* Product Information */}
