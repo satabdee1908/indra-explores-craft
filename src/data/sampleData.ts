@@ -1,4 +1,3 @@
-
 // This file contains sample data for the IndraCrafts platform
 // In a real application, this would be replaced with data from an API or database
 
@@ -131,6 +130,38 @@ export const allProducts = [
     artisan: "Sanjay Patra",
     artisanId: "a7",
     stock: 4
+  },
+  {
+    id: "p9",
+    name: "Radha Krishna Pattachitra Painting",
+    image: "public/lovable-uploads/cdab7710-1100-47f2-9034-c8b7578fcd43.png",
+    price: 4950,
+    description: "Exquisite Pattachitra painting depicting Radha Krishna in divine embrace, adorned with intricate details and traditional motifs. This masterpiece showcases the romance of the divine couple with fine detailing, set against a deep blue backdrop with decorative border patterns.",
+    category: "Art",
+    categoryId: "art",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Natural Colors on Silk Canvas",
+    craftType: "Pattachitra Painting",
+    artisan: "Anita Mohanty",
+    artisanId: "a3",
+    stock: 2
+  },
+  {
+    id: "p10",
+    name: "Jagannath Temple Pattachitra",
+    image: "public/lovable-uploads/5e596bfe-204c-473b-8b3f-946932f7aa2e.png",
+    price: 4800,
+    description: "Traditional Pattachitra painting depicting Lord Jagannath, Balabhadra, and Subhadra in the classical Odisha temple style. This vibrant artwork features intricate gold detailing, decorative borders, and the iconic deities of the Jagannath Temple in Puri, capturing the essence of Odisha's spiritual heritage.",
+    category: "Art",
+    categoryId: "art",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Natural Colors on Silk Canvas",
+    craftType: "Pattachitra Painting",
+    artisan: "Anita Mohanty",
+    artisanId: "a3",
+    stock: 1
   }
 ];
 
@@ -138,7 +169,7 @@ export const featuredProducts = [
   allProducts[0],
   allProducts[1],
   allProducts[2],
-  allProducts[6]
+  allProducts[8]
 ];
 
 // Artisans Data
