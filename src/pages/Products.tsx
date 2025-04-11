@@ -85,6 +85,7 @@ const Products = () => {
             <>
               <div className="flex justify-between items-center mb-6">
                 <p className="text-gray-600">{filteredProducts.length} products</p>
+                <p className="text-gray-600 text-sm font-medium">All products under ₹1,500</p>
               </div>
               
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">

@@ -13,8 +13,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardProps) => {
-  // Adjust price to be below 5000 as per user request
-  const adjustedPrice = price > 5000 ? 3500 + (price % 1500) : price;
+  // Ensure all prices are below 1500
+  const adjustedPrice = price > 1500 ? 900 + (price % 500) : price;
   
   return (
     <div className="group">

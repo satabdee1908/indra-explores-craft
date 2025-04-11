@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
@@ -75,9 +76,9 @@ const ProductDetail = () => {
     );
   }
 
-  // Function to format price and ensure it's below 5000
+  // Function to ensure price is below 1500
   const formatPrice = (price: number) => {
-    const displayPrice = price < 5000 ? price : 4999;
+    const displayPrice = price > 1500 ? 900 + (price % 500) : price;
     return displayPrice.toLocaleString();
   };
 
@@ -254,7 +255,7 @@ const ProductDetail = () => {
                 <ul>
                   <li>Domestic shipping: 3-5 business days</li>
                   <li>International shipping: 7-14 business days</li>
-                  <li>Free shipping on orders above ₹2,000 within India</li>
+                  <li>Free shipping on orders above ₹1,000 within India</li>
                 </ul>
                 
                 <h3>Return Policy</h3>
