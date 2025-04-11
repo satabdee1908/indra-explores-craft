@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
@@ -90,6 +89,16 @@ const ProductDetail = () => {
     return displayPrice.toLocaleString();
   };
 
+  // Function to determine the origin to display
+  const getDisplayOrigin = () => {
+    // If it's a Pattachitra product, show Puri as the origin
+    if (product.craftType === "Pattachitra Painting") {
+      return "Puri";
+    }
+    // Otherwise show the region from the product data
+    return product.region;
+  };
+
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -144,7 +153,7 @@ const ProductDetail = () => {
                 </li>
                 <li className="flex justify-between">
                   <span className="text-gray-600">Origin</span>
-                  <span>{product.region}</span>
+                  <span>{getDisplayOrigin()}</span>
                 </li>
                 <li className="flex justify-between">
                   <span className="text-gray-600">Craft Type</span>
@@ -222,7 +231,7 @@ const ProductDetail = () => {
               <div className="prose max-w-none">
                 <h3>The Cultural Significance</h3>
                 <p>
-                  The {product.name} represents a centuries-old tradition from the {product.region} region of India.
+                  The {product.name} represents a centuries-old tradition from the {getDisplayOrigin()} region of India.
                   This particular style dates back to the 16th century and was originally created for royal families.
                 </p>
                 <p>
