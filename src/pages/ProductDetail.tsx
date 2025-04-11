@@ -84,6 +84,12 @@ const ProductDetail = () => {
     );
   }
 
+  // Function to format price and ensure it's below 5000
+  const formatPrice = (price: number) => {
+    const displayPrice = price < 5000 ? price : 4999;
+    return displayPrice.toLocaleString();
+  };
+
   return (
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -110,7 +116,7 @@ const ProductDetail = () => {
                 {product.region}
               </span>
               <h1 className="text-3xl font-bold text-gray-900 mt-2">{product.name}</h1>
-              <p className="text-xl font-medium text-terracotta mt-2">₹{product.price < 5000 ? product.price.toLocaleString() : 4999.toLocaleString()}</p>
+              <p className="text-xl font-medium text-terracotta mt-2">₹{formatPrice(product.price)}</p>
               
               {product.stock > 0 ? (
                 <span className="inline-block bg-green-100 text-green-800 px-3 py-1 text-sm font-medium rounded-full mt-2">
