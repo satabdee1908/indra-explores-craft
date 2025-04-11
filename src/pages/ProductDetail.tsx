@@ -82,11 +82,11 @@ const ProductDetail = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Single Product Image */}
-          <div className="bg-white rounded-lg overflow-hidden aspect-square">
+          <div className="bg-white rounded-lg overflow-hidden aspect-square flex items-center justify-center p-4">
             <img 
               src={product.image} 
               alt={product.name} 
-              className="w-full h-full object-contain"
+              className="max-w-full max-h-full object-contain"
             />
           </div>
           
