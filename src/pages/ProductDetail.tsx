@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
-import ArtisanFeature from "@/components/product/ArtisanFeature";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -16,7 +15,6 @@ const ProductDetail = () => {
   const { productId } = useParams<{ productId: string }>();
   const { toast } = useToast();
   const [product, setProduct] = useState<any>(null);
-  const [artisan, setArtisan] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
 
@@ -29,12 +27,6 @@ const ProductDetail = () => {
     if (foundProduct) {
       console.log("Found product:", foundProduct);
       setProduct(foundProduct);
-      
-      // Find the artisan
-      const foundArtisan = artisans.find(a => a.id === foundProduct.artisanId);
-      if (foundArtisan) {
-        setArtisan(foundArtisan);
-      }
     } else {
       console.log("Product not found with ID:", productId);
     }
@@ -202,21 +194,6 @@ const ProductDetail = () => {
             </div>
           </div>
         </div>
-        
-        {/* Artisan Section */}
-        {artisan && (
-          <div className="mt-16">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Meet the Maker</h2>
-            <ArtisanFeature
-              id={artisan.id}
-              name={artisan.name}
-              image={artisan.image}
-              location={artisan.location}
-              craft={artisan.craft}
-              bio={artisan.bio}
-            />
-          </div>
-        )}
         
         {/* Additional Product Information */}
         <div className="mt-16">
