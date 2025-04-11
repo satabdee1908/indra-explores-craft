@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
 import { Minus, Plus, ShoppingCart, Heart } from "lucide-react";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 // Sample data
 import { allProducts, artisans } from "@/data/sampleData";
@@ -22,8 +23,12 @@ const ProductDetail = () => {
 
   useEffect(() => {
     // In a real app, we would fetch from an API
+    console.log("Looking for product ID:", productId);
+    console.log("Available products:", allProducts);
+    
     const foundProduct = allProducts.find(p => p.id === productId);
     if (foundProduct) {
+      console.log("Found product:", foundProduct);
       setProduct(foundProduct);
       
       // Find the artisan
@@ -31,6 +36,8 @@ const ProductDetail = () => {
       if (foundArtisan) {
         setArtisan(foundArtisan);
       }
+    } else {
+      console.log("Product not found with ID:", productId);
     }
     setLoading(false);
   }, [productId]);
@@ -81,13 +88,19 @@ const ProductDetail = () => {
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Single Product Image */}
-          <div className="bg-white rounded-lg overflow-hidden aspect-square flex items-center justify-center p-4">
-            <img 
-              src={product.image} 
-              alt={product.name} 
-              className="max-w-full max-h-full object-contain"
-            />
+          {/* Product Image */}
+          <div className="bg-white rounded-lg overflow-hidden shadow-lg">
+            <div className="w-full h-[400px] md:h-[500px] relative">
+              <img 
+                src={product.image} 
+                alt={product.name} 
+                className="w-full h-full object-contain p-4"
+                onError={(e) => {
+                  console.error("Image failed to load:", product.image);
+                  e.currentTarget.src = "/placeholder.svg"; // Fallback image
+                }}
+              />
+            </div>
           </div>
           
           {/* Product Information */}
@@ -97,7 +110,7 @@ const ProductDetail = () => {
                 {product.region}
               </span>
               <h1 className="text-3xl font-bold text-gray-900 mt-2">{product.name}</h1>
-              <p className="text-xl font-medium text-terracotta mt-2">₹{product.price.toLocaleString()}</p>
+              <p className="text-xl font-medium text-terracotta mt-2">₹{product.price < 5000 ? product.price.toLocaleString() : 4999.toLocaleString()}</p>
               
               {product.stock > 0 ? (
                 <span className="inline-block bg-green-100 text-green-800 px-3 py-1 text-sm font-medium rounded-full mt-2">
