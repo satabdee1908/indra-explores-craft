@@ -20,6 +20,10 @@ const ArtisanFeature = ({ id, name, image, location, craft, bio }: ArtisanFeatur
             src={image} 
             alt={name} 
             className="w-full h-full object-cover"
+            onError={(e) => {
+              console.error("Image failed to load:", image);
+              e.currentTarget.src = "/placeholder.svg"; // Fallback image
+            }}
           />
         </div>
       </div>
