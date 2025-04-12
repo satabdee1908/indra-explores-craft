@@ -1,3 +1,4 @@
+
 // This file contains sample data for the Suryodayaa crafts platform
 // In a real application, this would be replaced with data from an API or database
 
@@ -82,6 +83,54 @@ export const allProducts = [
     artisan: "Anita Mohanty",
     artisanId: "a3",
     stock: 1
+  },
+  {
+    id: "p6",
+    name: "Traditional Sambalpuri Saree (Red & Blue)",
+    image: "public/lovable-uploads/18b1d59a-7353-4dbf-bba9-3972209b3d2a.png",
+    price: 4500,
+    description: "Exquisite handwoven Sambalpuri saree featuring traditional ikat patterns in vibrant red and blue hues. This 6-yard cotton saree showcases intricate tie-dye work with rich maroon pallu adorned with classic Odisha motifs, bordered with yellow traditional patterns. The fine craftsmanship reflects the cultural heritage of Sambalpur and makes an elegant statement piece for any occasion.",
+    category: "Textiles",
+    categoryId: "textiles",
+    region: "Sambalpur, Odisha",
+    regionId: "odisha",
+    material: "Handwoven Cotton",
+    craftType: "Ikat Weaving",
+    artisan: "Meena Meher",
+    artisanId: "a1",
+    stock: 2
+  },
+  {
+    id: "p7",
+    name: "Sambalpuri Navy Blue Saree",
+    image: "public/lovable-uploads/86aeeaed-f6dc-4c3c-a4ec-7ddb28cc8ec9.png",
+    price: 4850,
+    description: "Elegant Sambalpuri saree in navy blue with intricate elephant motifs throughout. This premium handloom saree features a rich maroon border with traditional geometric patterns and a contrasting pallu with tribal art patterns. The meticulous ikat work demonstrates the exceptional skill of Odisha's master weavers, creating a perfect blend of tradition and sophistication for special occasions.",
+    category: "Textiles",
+    categoryId: "textiles",
+    region: "Sambalpur, Odisha",
+    regionId: "odisha",
+    material: "Handwoven Cotton Silk",
+    craftType: "Ikat Weaving",
+    artisan: "Meena Meher",
+    artisanId: "a1",
+    stock: 3
+  },
+  {
+    id: "p8",
+    name: "Bamboo & Pearl Statement Necklace",
+    image: "public/lovable-uploads/a40a9e59-eb5f-4910-8689-ad53a7191089.png",
+    price: 1850,
+    description: "Contemporary statement necklace handcrafted from sustainable bamboo segments and natural black pearls. This eco-friendly piece features five geometric bamboo rectangles alternating with clusters of shimmering dark pearls, creating a stunning contrast. The jute cord adds an earthy touch, making this a perfect accessory for both traditional and modern outfits. Each piece is lightweight, comfortable to wear, and ethically made by tribal artisans.",
+    category: "Jewelry",
+    categoryId: "jewelry",
+    region: "Koraput, Odisha",
+    regionId: "odisha",
+    material: "Bamboo, Pearls, Jute",
+    craftType: "Tribal Jewelry Making",
+    artisan: "Sunita Pujari",
+    artisanId: "a4",
+    stock: 4
   }
 ];
 
@@ -89,7 +138,7 @@ export const featuredProducts = [
   allProducts[0],
   allProducts[1],
   allProducts[2],
-  allProducts[3]
+  allProducts[5]
 ];
 
 // Artisans Data
@@ -102,7 +151,7 @@ export const artisans = [
     craft: "Ikat Weaving",
     bio: "Meena Meher is a third-generation Ikat weaver from Sambalpur, Odisha. She learned the craft from her mother at the age of 12 and has been weaving for over 25 years. Her specialty is creating intricate geometric patterns using the double ikat technique, where both warp and weft threads are tie-dyed before weaving.",
     yearsActive: 25,
-    products: ["p1", "p7"]
+    products: ["p6", "p7"]
   },
   {
     id: "a2",
@@ -123,6 +172,16 @@ export const artisans = [
     bio: "Anita Mohanty is a National Award-winning Pattachitra artist who specializes in painting mythological narratives and temple scenes. She prepares her own canvas using cotton cloth treated with tamarind paste and chalk powder, and uses natural colors derived from stones, shells, and plants.",
     yearsActive: 22,
     products: ["p2", "p3", "p4", "p5"]
+  },
+  {
+    id: "a4",
+    name: "Sunita Pujari",
+    image: "https://images.unsplash.com/photo-1567011637355-14b062a8a94a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    location: "Koraput, Odisha",
+    craft: "Tribal Jewelry Making",
+    bio: "Sunita Pujari is an award-winning artisan from the tribal regions of Koraput who specializes in creating contemporary jewelry using traditional materials. She combines sustainable bamboo, natural fibers, and locally sourced stones to create unique pieces that blend tribal aesthetics with modern designs. Her work supports a community of local women artisans.",
+    yearsActive: 15,
+    products: ["p8"]
   }
 ];
 
