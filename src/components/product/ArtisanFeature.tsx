@@ -1,6 +1,7 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 interface ArtisanFeatureProps {
   id: string;
@@ -12,19 +13,33 @@ interface ArtisanFeatureProps {
 }
 
 const ArtisanFeature = ({ id, name, image, location, craft, bio }: ArtisanFeatureProps) => {
+  // Get initials for avatar fallback
+  const getInitials = (name: string) => {
+    return name
+      .split(' ')
+      .map(part => part[0])
+      .join('')
+      .toUpperCase();
+  };
+
   return (
     <div className="border border-gray-200 rounded-lg bg-white p-6 flex flex-col md:flex-row gap-6">
-      <div className="md:w-1/4">
-        <div className="aspect-square overflow-hidden rounded-full border-4 border-sand">
-          <img 
-            src={image} 
-            alt={name} 
-            className="w-full h-full object-cover"
-            onError={(e) => {
-              console.error("Image failed to load:", image);
-              e.currentTarget.src = "/placeholder.svg"; // Fallback image
-            }}
-          />
+      <div className="md:w-1/4 flex justify-center">
+        <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-sand">
+          <Avatar className="h-full w-full">
+            <AvatarImage 
+              src={image} 
+              alt={name} 
+              className="object-cover"
+              onError={(e) => {
+                console.error("Image failed to load:", image);
+                e.currentTarget.src = "/placeholder.svg"; // Fallback image
+              }}
+            />
+            <AvatarFallback className="text-4xl bg-terracotta/20 text-terracotta">
+              {getInitials(name)}
+            </AvatarFallback>
+          </Avatar>
         </div>
       </div>
       <div className="md:w-3/4">

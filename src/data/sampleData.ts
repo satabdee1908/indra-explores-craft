@@ -146,7 +146,7 @@ export const artisans = [
   {
     id: "a1",
     name: "Meena Meher",
-    image: "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
     location: "Sambalpur, Odisha",
     craft: "Ikat Weaving",
     bio: "Meena Meher is a third-generation Ikat weaver from Sambalpur, Odisha. She learned the craft from her mother at the age of 12 and has been weaving for over 25 years. Her specialty is creating intricate geometric patterns using the double ikat technique, where both warp and weft threads are tie-dyed before weaving.",
@@ -156,7 +156,7 @@ export const artisans = [
   {
     id: "a2",
     name: "Rajesh Maharana",
-    image: "https://images.unsplash.com/photo-1566492031773-4f4e44671857?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
     location: "Dhenkanal, Odisha",
     craft: "Dhokra Metal Casting",
     bio: "Rajesh Maharana comes from a family of traditional Dhokra artisans. Working with brass using the lost-wax casting method, he creates intricate figurines that reflect tribal aesthetics and mythology. His workshop employs several local youth, whom he trains in this ancient craft.",
@@ -166,7 +166,7 @@ export const artisans = [
   {
     id: "a3",
     name: "Anita Mohanty",
-    image: "https://images.unsplash.com/photo-1567532939604-b6b5b0db2604?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80",
+    image: "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
     location: "Puri, Odisha",
     craft: "Pattachitra Painting",
     bio: "Anita Mohanty is a National Award-winning Pattachitra artist who specializes in painting mythological narratives and temple scenes. She prepares her own canvas using cotton cloth treated with tamarind paste and chalk powder, and uses natural colors derived from stones, shells, and plants.",
@@ -176,7 +176,7 @@ export const artisans = [
   {
     id: "a4",
     name: "Sunita Pujari",
-    image: "https://images.unsplash.com/photo-1567011637355-14b062a8a94a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1374&q=80",
+    image: "https://images.unsplash.com/photo-1620794108219-aedbaded4eea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
     location: "Koraput, Odisha",
     craft: "Tribal Jewelry Making",
     bio: "Sunita Pujari is an award-winning artisan from the tribal regions of Koraput who specializes in creating contemporary jewelry using traditional materials. She combines sustainable bamboo, natural fibers, and locally sourced stones to create unique pieces that blend tribal aesthetics with modern designs. Her work supports a community of local women artisans.",
