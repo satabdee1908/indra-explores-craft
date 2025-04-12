@@ -13,8 +13,8 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardProps) => {
-  // Ensure all prices are below 1500
-  const adjustedPrice = price > 1500 ? 900 + (price % 500) : price;
+  // Ensure all prices are below 5000
+  const adjustedPrice = price > 5000 ? 2500 + (price % 2000) : price;
   
   return (
     <div className="group">
@@ -24,6 +24,10 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
             src={image}
             alt={name}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+            onError={(e) => {
+              console.error("Image failed to load:", image);
+              e.currentTarget.src = "/placeholder.svg"; // Fallback image
+            }}
           />
           <div className="absolute bottom-0 left-0 bg-terracotta py-1 px-3 text-xs text-white">
             {region}

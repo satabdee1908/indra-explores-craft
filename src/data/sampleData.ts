@@ -1,170 +1,10 @@
-// This file contains sample data for the IndraCrafts platform
+// This file contains sample data for the Suryodayaa crafts platform
 // In a real application, this would be replaced with data from an API or database
 
 // Products Data
 export const allProducts = [
   {
     id: "p1",
-    name: "Sambalpuri Ikat Saree",
-    image: "https://images.unsplash.com/photo-1622233025248-e4ac34072f3b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 4500,
-    description: "Handwoven Sambalpuri Ikat saree in cotton with traditional motifs. This vibrant piece showcases the intricate tie-and-dye technique that Sambalpur is famous for.",
-    category: "Textiles",
-    categoryId: "textiles",
-    region: "Odisha",
-    regionId: "odisha",
-    material: "Handloom Cotton",
-    craftType: "Ikat Weaving",
-    artisan: "Meena Meher",
-    artisanId: "a1",
-    stock: 5
-  },
-  {
-    id: "p2",
-    name: "Brass Dhokra Elephant",
-    image: "https://images.unsplash.com/photo-1600251215707-95bb01c73f51?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 2800,
-    description: "Traditional Dhokra brass figurine of an elephant, handcrafted using the lost-wax casting technique. Each piece is unique and carries the distinctive tribal aesthetic of Odisha.",
-    category: "Handicrafts",
-    categoryId: "handicrafts",
-    region: "Odisha",
-    regionId: "odisha",
-    material: "Brass",
-    craftType: "Dhokra Metal Casting",
-    artisan: "Rajesh Maharana",
-    artisanId: "a2",
-    stock: 8
-  },
-  {
-    id: "p3",
-    name: "Handpainted Pattachitra Wall Art",
-    image: "https://images.unsplash.com/photo-1582561833087-1cc950e28d28?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 3600,
-    description: "Traditional Pattachitra painting on silk, depicting scenes from mythology. This intricate art form uses natural colors and features meticulous detailing characteristic of Odisha's heritage.",
-    category: "Home Decor",
-    categoryId: "home-decor",
-    region: "Odisha",
-    regionId: "odisha",
-    material: "Silk Canvas & Natural Colors",
-    craftType: "Pattachitra Painting",
-    artisan: "Anita Mohanty",
-    artisanId: "a3",
-    stock: 3
-  },
-  {
-    id: "p4",
-    name: "Block-Printed Table Runner",
-    image: "https://images.unsplash.com/photo-1600252278397-5fe47c86d3aa?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 1200,
-    description: "Hand block-printed cotton table runner with traditional floral motifs. Each piece is printed by hand using wooden blocks carved by skilled artisans.",
-    category: "Home Decor",
-    categoryId: "home-decor",
-    region: "Rajasthan",
-    regionId: "rajasthan",
-    material: "Organic Cotton",
-    craftType: "Block Printing",
-    artisan: "Lakshmi Devi",
-    artisanId: "a4",
-    stock: 12
-  },
-  {
-    id: "p5",
-    name: "Handwoven Jute Basket Set",
-    image: "https://images.unsplash.com/photo-1578149669551-9179e8a9ea5b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 1800,
-    description: "Set of three nesting baskets handwoven from natural jute. Perfect for storage and organization while adding an eco-friendly touch to your home.",
-    category: "Home Decor",
-    categoryId: "home-decor",
-    region: "West Bengal",
-    regionId: "west-bengal",
-    material: "Natural Jute",
-    craftType: "Basket Weaving",
-    artisan: "Dipak Roy",
-    artisanId: "a5",
-    stock: 7
-  },
-  {
-    id: "p6",
-    name: "Handcarved Wooden Coasters",
-    image: "https://images.unsplash.com/photo-1584589167171-541ce45f1eea?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 950,
-    description: "Set of six handcarved wooden coasters with intricate designs. Each piece is crafted from sustainably sourced sheesham wood and finished with natural oils.",
-    category: "Home Decor",
-    categoryId: "home-decor",
-    region: "Karnataka",
-    regionId: "karnataka",
-    material: "Sheesham Wood",
-    craftType: "Wood Carving",
-    artisan: "Venkatesh K.",
-    artisanId: "a6",
-    stock: 15
-  },
-  {
-    id: "p7",
-    name: "Handloom Cotton Stole",
-    image: "https://images.unsplash.com/photo-1604752151091-1410ad3a8f6a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 1100,
-    description: "Lightweight handloom cotton stole with subtle ikat patterns. Perfect for all seasons, this versatile accessory adds an elegant touch to any outfit.",
-    category: "Textiles",
-    categoryId: "textiles",
-    region: "Odisha",
-    regionId: "odisha",
-    material: "Handloom Cotton",
-    craftType: "Ikat Weaving",
-    artisan: "Meena Meher",
-    artisanId: "a1",
-    stock: 9
-  },
-  {
-    id: "p8",
-    name: "Terracotta Wall Hanging",
-    image: "https://images.unsplash.com/photo-1574281570877-bd815ebb50a4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1500&q=80",
-    price: 1600,
-    description: "Handcrafted terracotta wall hanging depicting rural life scenes. This rustic piece adds warmth and cultural depth to any space.",
-    category: "Home Decor",
-    categoryId: "home-decor",
-    region: "West Bengal",
-    regionId: "west-bengal",
-    material: "Terracotta",
-    craftType: "Clay Modeling",
-    artisan: "Sanjay Patra",
-    artisanId: "a7",
-    stock: 4
-  },
-  {
-    id: "p9",
-    name: "Radha Krishna Pattachitra Painting",
-    image: "public/lovable-uploads/cdab7710-1100-47f2-9034-c8b7578fcd43.png",
-    price: 4950,
-    description: "Exquisite Pattachitra painting depicting Radha Krishna in divine embrace, adorned with intricate details and traditional motifs. This masterpiece showcases the romance of the divine couple with fine detailing, set against a deep blue backdrop with decorative border patterns.",
-    category: "Art",
-    categoryId: "art",
-    region: "Odisha",
-    regionId: "odisha",
-    material: "Natural Colors on Silk Canvas",
-    craftType: "Pattachitra Painting",
-    artisan: "Anita Mohanty",
-    artisanId: "a3",
-    stock: 2
-  },
-  {
-    id: "p10",
-    name: "Jagannath Temple Pattachitra",
-    image: "public/lovable-uploads/5e596bfe-204c-473b-8b3f-946932f7aa2e.png",
-    price: 4800,
-    description: "Traditional Pattachitra painting depicting Lord Jagannath, Balabhadra, and Subhadra in the classical Odisha temple style. This vibrant artwork features intricate gold detailing, decorative borders, and the iconic deities of the Jagannath Temple in Puri, capturing the essence of Odisha's spiritual heritage.",
-    category: "Art",
-    categoryId: "art",
-    region: "Odisha",
-    regionId: "odisha",
-    material: "Natural Colors on Silk Canvas",
-    craftType: "Pattachitra Painting",
-    artisan: "Anita Mohanty",
-    artisanId: "a3",
-    stock: 1
-  },
-  {
-    id: "p11",
     name: "Brass Dhokra Elephant Figurine",
     image: "public/lovable-uploads/3140733d-ecb9-41f6-a0e9-3ea97bfa8a31.png",
     price: 1450,
@@ -180,7 +20,7 @@ export const allProducts = [
     stock: 5
   },
   {
-    id: "p12",
+    id: "p2",
     name: "Jagannath Chandua Wall Hanging",
     image: "public/lovable-uploads/64978fde-8165-40aa-a3f9-2c24ffa5ff26.png",
     price: 1350,
@@ -196,7 +36,7 @@ export const allProducts = [
     stock: 3
   },
   {
-    id: "p13",
+    id: "p3",
     name: "Radha Krishna Chandua Wall Art",
     image: "public/lovable-uploads/3dd151ff-9897-44d3-aa7f-2650806e118c.png",
     price: 1250,
@@ -210,6 +50,38 @@ export const allProducts = [
     artisan: "Anita Mohanty",
     artisanId: "a3",
     stock: 4
+  },
+  {
+    id: "p4",
+    name: "Radha Krishna Pattachitra Painting",
+    image: "public/lovable-uploads/cdab7710-1100-47f2-9034-c8b7578fcd43.png",
+    price: 4950,
+    description: "Exquisite Pattachitra painting depicting Radha Krishna in divine embrace, adorned with intricate details and traditional motifs. This masterpiece showcases the romance of the divine couple with fine detailing, set against a deep blue backdrop with decorative border patterns.",
+    category: "Art",
+    categoryId: "art",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Natural Colors on Silk Canvas",
+    craftType: "Pattachitra Painting",
+    artisan: "Anita Mohanty",
+    artisanId: "a3",
+    stock: 2
+  },
+  {
+    id: "p5",
+    name: "Jagannath Temple Pattachitra",
+    image: "public/lovable-uploads/5e596bfe-204c-473b-8b3f-946932f7aa2e.png",
+    price: 4800,
+    description: "Traditional Pattachitra painting depicting Lord Jagannath, Balabhadra, and Subhadra in the classical Odisha temple style. This vibrant artwork features intricate gold detailing, decorative borders, and the iconic deities of the Jagannath Temple in Puri, capturing the essence of Odisha's spiritual heritage.",
+    category: "Art",
+    categoryId: "art",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Natural Colors on Silk Canvas",
+    craftType: "Pattachitra Painting",
+    artisan: "Anita Mohanty",
+    artisanId: "a3",
+    stock: 1
   }
 ];
 
@@ -217,7 +89,7 @@ export const featuredProducts = [
   allProducts[0],
   allProducts[1],
   allProducts[2],
-  allProducts[11]
+  allProducts[3]
 ];
 
 // Artisans Data
@@ -240,7 +112,7 @@ export const artisans = [
     craft: "Dhokra Metal Casting",
     bio: "Rajesh Maharana comes from a family of traditional Dhokra artisans. Working with brass using the lost-wax casting method, he creates intricate figurines that reflect tribal aesthetics and mythology. His workshop employs several local youth, whom he trains in this ancient craft.",
     yearsActive: 18,
-    products: ["p2"]
+    products: ["p1"]
   },
   {
     id: "a3",
@@ -250,47 +122,7 @@ export const artisans = [
     craft: "Pattachitra Painting",
     bio: "Anita Mohanty is a National Award-winning Pattachitra artist who specializes in painting mythological narratives and temple scenes. She prepares her own canvas using cotton cloth treated with tamarind paste and chalk powder, and uses natural colors derived from stones, shells, and plants.",
     yearsActive: 22,
-    products: ["p3"]
-  },
-  {
-    id: "a4",
-    name: "Lakshmi Devi",
-    image: "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80",
-    location: "Jaipur, Rajasthan",
-    craft: "Block Printing",
-    bio: "Lakshmi Devi has been practicing the art of block printing for over 15 years. She works with a women's cooperative in Jaipur that focuses on preserving traditional Rajasthani block printing techniques while creating contemporary designs. She specializes in vegetable dye printing.",
-    yearsActive: 15,
-    products: ["p4"]
-  },
-  {
-    id: "a5",
-    name: "Dipak Roy",
-    image: "https://images.unsplash.com/photo-1556157382-97eda2f9e946?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    location: "Kolkata, West Bengal",
-    craft: "Basket Weaving",
-    bio: "Dipak Roy is a master jute craftsman from rural West Bengal who moved to Kolkata to find better markets for his work. He has developed eco-friendly techniques for treating jute to enhance its durability while maintaining its natural appeal. His baskets combine traditional weaving methods with contemporary designs.",
-    yearsActive: 20,
-    products: ["p5"]
-  },
-  {
-    id: "a6",
-    name: "Venkatesh K.",
-    image: "https://images.unsplash.com/photo-1547425260-76bcadfb4f2c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    location: "Mysore, Karnataka",
-    craft: "Wood Carving",
-    bio: "Venkatesh K. belongs to a family of traditional wood carvers from Mysore. His specialty is the intricate Mysore style of rosewood carving, characterized by fine details and smooth finishes. He sources wood sustainably and creates functional art pieces that blend tradition with utility.",
-    yearsActive: 30,
-    products: ["p6"]
-  },
-  {
-    id: "a7",
-    name: "Sanjay Patra",
-    image: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80",
-    location: "Bankura, West Bengal",
-    craft: "Terracotta Craft",
-    bio: "Sanjay Patra is a renowned terracotta artist from Bankura, a region famous for its terracotta horse sculptures. He has expanded the craft to include contemporary wall art while preserving traditional techniques. He digs clay from local ponds during winter and prepares it through a time-consuming process to achieve the right consistency.",
-    yearsActive: 25,
-    products: ["p8"]
+    products: ["p2", "p3", "p4", "p5"]
   }
 ];
 
