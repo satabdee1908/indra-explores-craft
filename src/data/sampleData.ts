@@ -162,6 +162,54 @@ export const allProducts = [
     artisan: "Anita Mohanty",
     artisanId: "a3",
     stock: 1
+  },
+  {
+    id: "p11",
+    name: "Brass Dhokra Elephant Figurine",
+    image: "public/lovable-uploads/3140733d-ecb9-41f6-a0e9-3ea97bfa8a31.png",
+    price: 1450,
+    description: "Exquisite handcrafted brass dhokra elephant figurine made using the traditional lost-wax casting technique. This detailed figurine features intricate patterns across the body with a lattice design on the back. Each piece is uniquely crafted by skilled artisans from Odisha, making it a perfect addition to your home decor or as a meaningful gift.",
+    category: "Handicrafts",
+    categoryId: "handicrafts",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Brass",
+    craftType: "Dhokra Metal Casting",
+    artisan: "Rajesh Maharana",
+    artisanId: "a2",
+    stock: 5
+  },
+  {
+    id: "p12",
+    name: "Jagannath Chandua Wall Hanging",
+    image: "public/lovable-uploads/64978fde-8165-40aa-a3f9-2c24ffa5ff26.png",
+    price: 1350,
+    description: "Traditional Odishan Chandua textile featuring Lord Jagannath in vibrant appliqué work. This colorful wall hanging showcases intricate needlework on black background with bright yellow border and floral motifs. The central medallion displays the iconic face of Lord Jagannath surrounded by decorative patterns, representing the rich temple textile tradition of Puri.",
+    category: "Home Decor",
+    categoryId: "home-decor",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Cotton Fabric with Appliqué",
+    craftType: "Appliqué Work",
+    artisan: "Anita Mohanty",
+    artisanId: "a3",
+    stock: 3
+  },
+  {
+    id: "p13",
+    name: "Radha Krishna Chandua Wall Art",
+    image: "public/lovable-uploads/3dd151ff-9897-44d3-aa7f-2650806e118c.png",
+    price: 1250,
+    description: "Stunning Chandua appliqué wall art featuring Radha Krishna in traditional Odishan style. This diamond-shaped textile art displays intricate needlework on a rich red background with beautiful yellow border. The central medallion portrays Radha Krishna in elegant dance pose, surrounded by decorative patterns and heart motifs in the corners, representing love and devotion.",
+    category: "Home Decor",
+    categoryId: "home-decor",
+    region: "Odisha",
+    regionId: "odisha",
+    material: "Cotton Fabric with Appliqué",
+    craftType: "Appliqué Work",
+    artisan: "Anita Mohanty",
+    artisanId: "a3",
+    stock: 4
   }
 ];
 
@@ -169,7 +217,7 @@ export const featuredProducts = [
   allProducts[0],
   allProducts[1],
   allProducts[2],
-  allProducts[8]
+  allProducts[11]
 ];
 
 // Artisans Data
