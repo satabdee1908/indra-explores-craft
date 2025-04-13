@@ -154,21 +154,21 @@ export const artisans = [
   },
   {
     id: "a2",
-    name: "Rajesh Maharana",
+    name: "Anita Maharana",
     image: "/lovable-uploads/0ae04a37-b1ee-435c-86d8-c681bbc5d197.png", // Dhokra craftsperson
     location: "Dhenkanal, Odisha",
     craft: "Dhokra Metal Casting",
-    bio: "Rajesh Maharana comes from a family of traditional Dhokra artisans. Working with brass using the lost-wax casting method, he creates intricate figurines that reflect tribal aesthetics and mythology. His workshop employs several local youth, whom he trains in this ancient craft.",
+    bio: "Anita Maharana is a small but exceptionally talented Dhokra artisan from Dhenkanal. Despite running a modest workshop, her intricate brass figurines using the ancient lost-wax casting technique have gained recognition for their exceptional detail and quality. Working with limited resources, she preserves tribal aesthetics in her creations while training local youth to keep this traditional craft alive for future generations.",
     yearsActive: 18,
     products: ["p1"]
   },
   {
     id: "a3",
-    name: "Anita Mohanty",
+    name: "Rajesh Mohanty",
     image: "/lovable-uploads/7475fc5a-f4e6-4e02-8586-46267781525a.png", // Pattachitra artist
     location: "Puri, Odisha",
     craft: "Pattachitra Painting",
-    bio: "Anita Mohanty is a National Award-winning Pattachitra artist who specializes in painting mythological narratives and temple scenes. She prepares her own canvas using cotton cloth treated with tamarind paste and chalk powder, and uses natural colors derived from stones, shells, and plants.",
+    bio: "Rajesh Mohanty is a small-scale but immensely talented Pattachitra artist from Puri. Though he works from a humble home studio, his mythological narratives and temple scenes painted with natural colors have received local acclaim. He meticulously prepares his own canvas using traditional methods with cotton cloth, tamarind paste, and chalk powder, and creates his vibrant colors from stones, shells, and plants, preserving techniques passed down through generations.",
     yearsActive: 22,
     products: ["p2", "p3", "p4", "p5"]
   },

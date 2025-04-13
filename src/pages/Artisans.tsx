@@ -30,6 +30,9 @@ const Artisans = () => {
     <Layout>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h1 className="text-3xl font-bold text-gray-900 mb-8">Meet Our Artisans</h1>
+        <p className="text-gray-600 mb-8">
+          Behind every beautiful handcrafted item is a talented artisan. Our platform supports small-scale but exceptionally talented craftspeople from across Odisha, helping preserve traditional techniques while providing sustainable livelihoods.
+        </p>
         
         <div className="space-y-6">
           {artisansList.map((artisan) => (
