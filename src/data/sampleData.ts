@@ -146,7 +146,7 @@ export const artisans = [
   {
     id: "a1",
     name: "Meena Meher",
-    image: "https://images.unsplash.com/photo-1617019114583-affb34d1b3cd?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
+    image: "/lovable-uploads/9f8211c5-af16-4c53-8fcb-722aa3a60047.png", // Sambalpuri Saree weaver
     location: "Sambalpur, Odisha",
     craft: "Ikat Weaving",
     bio: "Meena Meher is a third-generation Ikat weaver from Sambalpur, Odisha. She learned the craft from her mother at the age of 12 and has been weaving for over 25 years. Her specialty is creating intricate geometric patterns using the double ikat technique, where both warp and weft threads are tie-dyed before weaving.",
@@ -156,7 +156,7 @@ export const artisans = [
   {
     id: "a2",
     name: "Rajesh Maharana",
-    image: "https://images.unsplash.com/photo-1518457607834-6e8d80c183c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
+    image: "/lovable-uploads/0ae04a37-b1ee-435c-86d8-c681bbc5d197.png", // Dhokra craftsperson
     location: "Dhenkanal, Odisha",
     craft: "Dhokra Metal Casting",
     bio: "Rajesh Maharana comes from a family of traditional Dhokra artisans. Working with brass using the lost-wax casting method, he creates intricate figurines that reflect tribal aesthetics and mythology. His workshop employs several local youth, whom he trains in this ancient craft.",
@@ -166,7 +166,7 @@ export const artisans = [
   {
     id: "a3",
     name: "Anita Mohanty",
-    image: "https://images.unsplash.com/photo-1610216705422-caa3fcb6d158?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
+    image: "/lovable-uploads/7475fc5a-f4e6-4e02-8586-46267781525a.png", // Pattachitra artist
     location: "Puri, Odisha",
     craft: "Pattachitra Painting",
     bio: "Anita Mohanty is a National Award-winning Pattachitra artist who specializes in painting mythological narratives and temple scenes. She prepares her own canvas using cotton cloth treated with tamarind paste and chalk powder, and uses natural colors derived from stones, shells, and plants.",

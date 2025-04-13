@@ -34,7 +34,7 @@ const ArtisanFeature = ({ id, name, image, location, craft, bio }: ArtisanFeatur
               src={imageError ? "/placeholder.svg" : image} 
               alt={name} 
               className="object-cover"
-              onError={(e) => {
+              onError={() => {
                 console.error("Image failed to load:", image);
                 setImageError(true);
               }}

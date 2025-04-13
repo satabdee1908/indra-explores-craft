@@ -15,7 +15,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardProps) => {
   // Ensure all prices are below 5000
-  const adjustedPrice = price > 5000 ? 2500 + (price % 2000) : price;
+  const adjustedPrice = price > 5000 ? 4999 : price;
   
   const [imageError, setImageError] = useState(false);
   
@@ -27,7 +27,7 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
             src={imageError ? "/placeholder.svg" : image}
             alt={name}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-            onError={(e) => {
+            onError={() => {
               console.error("Image failed to load:", image);
               setImageError(true);
             }}
