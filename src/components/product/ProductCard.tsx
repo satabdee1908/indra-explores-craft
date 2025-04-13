@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ShoppingCart } from "lucide-react";
+import { useState } from "react";
 
 interface ProductCardProps {
   id: string;
@@ -16,17 +17,19 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
   // Ensure all prices are below 5000
   const adjustedPrice = price > 5000 ? 2500 + (price % 2000) : price;
   
+  const [imageError, setImageError] = useState(false);
+  
   return (
     <div className="group">
       <Link to={`/products/${id}`} className="block overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-lg">
         <div className="relative h-64 overflow-hidden">
           <img
-            src={image}
+            src={imageError ? "/placeholder.svg" : image}
             alt={name}
             className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
             onError={(e) => {
               console.error("Image failed to load:", image);
-              e.currentTarget.src = "/placeholder.svg"; // Fallback image
+              setImageError(true);
             }}
           />
           <div className="absolute bottom-0 left-0 bg-terracotta py-1 px-3 text-xs text-white">

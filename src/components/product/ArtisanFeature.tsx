@@ -1,4 +1,5 @@
 
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
@@ -13,6 +14,8 @@ interface ArtisanFeatureProps {
 }
 
 const ArtisanFeature = ({ id, name, image, location, craft, bio }: ArtisanFeatureProps) => {
+  const [imageError, setImageError] = useState(false);
+  
   // Get initials for avatar fallback
   const getInitials = (name: string) => {
     return name
@@ -28,12 +31,12 @@ const ArtisanFeature = ({ id, name, image, location, craft, bio }: ArtisanFeatur
         <div className="h-48 w-48 overflow-hidden rounded-full border-4 border-sand">
           <Avatar className="h-full w-full">
             <AvatarImage 
-              src={image} 
+              src={imageError ? "/placeholder.svg" : image} 
               alt={name} 
               className="object-cover"
               onError={(e) => {
                 console.error("Image failed to load:", image);
-                e.currentTarget.src = "/placeholder.svg"; // Fallback image
+                setImageError(true);
               }}
             />
             <AvatarFallback className="text-4xl bg-terracotta/20 text-terracotta">

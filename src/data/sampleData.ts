@@ -7,7 +7,7 @@ export const allProducts = [
   {
     id: "p1",
     name: "Brass Dhokra Elephant Figurine",
-    image: "public/lovable-uploads/3140733d-ecb9-41f6-a0e9-3ea97bfa8a31.png",
+    image: "/lovable-uploads/3140733d-ecb9-41f6-a0e9-3ea97bfa8a31.png",
     price: 1450,
     description: "Exquisite handcrafted brass dhokra elephant figurine made using the traditional lost-wax casting technique. This detailed figurine features intricate patterns across the body with a lattice design on the back. Each piece is uniquely crafted by skilled artisans from Odisha, making it a perfect addition to your home decor or as a meaningful gift.",
     category: "Handicrafts",
@@ -23,7 +23,7 @@ export const allProducts = [
   {
     id: "p2",
     name: "Jagannath Chandua Wall Hanging",
-    image: "public/lovable-uploads/64978fde-8165-40aa-a3f9-2c24ffa5ff26.png",
+    image: "/lovable-uploads/64978fde-8165-40aa-a3f9-2c24ffa5ff26.png",
     price: 1350,
     description: "Traditional Odishan Chandua textile featuring Lord Jagannath in vibrant appliqué work. This colorful wall hanging showcases intricate needlework on black background with bright yellow border and floral motifs. The central medallion displays the iconic face of Lord Jagannath surrounded by decorative patterns, representing the rich temple textile tradition of Puri.",
     category: "Home Decor",
@@ -39,7 +39,7 @@ export const allProducts = [
   {
     id: "p3",
     name: "Radha Krishna Chandua Wall Art",
-    image: "public/lovable-uploads/3dd151ff-9897-44d3-aa7f-2650806e118c.png",
+    image: "/lovable-uploads/3dd151ff-9897-44d3-aa7f-2650806e118c.png",
     price: 1250,
     description: "Stunning Chandua appliqué wall art featuring Radha Krishna in traditional Odishan style. This diamond-shaped textile art displays intricate needlework on a rich red background with beautiful yellow border. The central medallion portrays Radha Krishna in elegant dance pose, surrounded by decorative patterns and heart motifs in the corners, representing love and devotion.",
     category: "Home Decor",
@@ -55,7 +55,7 @@ export const allProducts = [
   {
     id: "p4",
     name: "Radha Krishna Pattachitra Painting",
-    image: "public/lovable-uploads/cdab7710-1100-47f2-9034-c8b7578fcd43.png",
+    image: "/lovable-uploads/cdab7710-1100-47f2-9034-c8b7578fcd43.png",
     price: 4950,
     description: "Exquisite Pattachitra painting depicting Radha Krishna in divine embrace, adorned with intricate details and traditional motifs. This masterpiece showcases the romance of the divine couple with fine detailing, set against a deep blue backdrop with decorative border patterns.",
     category: "Art",
@@ -71,7 +71,7 @@ export const allProducts = [
   {
     id: "p5",
     name: "Jagannath Temple Pattachitra",
-    image: "public/lovable-uploads/5e596bfe-204c-473b-8b3f-946932f7aa2e.png",
+    image: "/lovable-uploads/5e596bfe-204c-473b-8b3f-946932f7aa2e.png",
     price: 4800,
     description: "Traditional Pattachitra painting depicting Lord Jagannath, Balabhadra, and Subhadra in the classical Odisha temple style. This vibrant artwork features intricate gold detailing, decorative borders, and the iconic deities of the Jagannath Temple in Puri, capturing the essence of Odisha's spiritual heritage.",
     category: "Art",
@@ -87,7 +87,7 @@ export const allProducts = [
   {
     id: "p6",
     name: "Traditional Sambalpuri Saree (Red & Blue)",
-    image: "public/lovable-uploads/18b1d59a-7353-4dbf-bba9-3972209b3d2a.png",
+    image: "/lovable-uploads/18b1d59a-7353-4dbf-bba9-3972209b3d2a.png",
     price: 4500,
     description: "Exquisite handwoven Sambalpuri saree featuring traditional ikat patterns in vibrant red and blue hues. This 6-yard cotton saree showcases intricate tie-dye work with rich maroon pallu adorned with classic Odisha motifs, bordered with yellow traditional patterns. The fine craftsmanship reflects the cultural heritage of Sambalpur and makes an elegant statement piece for any occasion.",
     category: "Textiles",
@@ -103,7 +103,7 @@ export const allProducts = [
   {
     id: "p7",
     name: "Sambalpuri Navy Blue Saree",
-    image: "public/lovable-uploads/86aeeaed-f6dc-4c3c-a4ec-7ddb28cc8ec9.png",
+    image: "/lovable-uploads/86aeeaed-f6dc-4c3c-a4ec-7ddb28cc8ec9.png",
     price: 4850,
     description: "Elegant Sambalpuri saree in navy blue with intricate elephant motifs throughout. This premium handloom saree features a rich maroon border with traditional geometric patterns and a contrasting pallu with tribal art patterns. The meticulous ikat work demonstrates the exceptional skill of Odisha's master weavers, creating a perfect blend of tradition and sophistication for special occasions.",
     category: "Textiles",
@@ -119,7 +119,7 @@ export const allProducts = [
   {
     id: "p8",
     name: "Bamboo & Pearl Statement Necklace",
-    image: "public/lovable-uploads/a40a9e59-eb5f-4910-8689-ad53a7191089.png",
+    image: "/lovable-uploads/a40a9e59-eb5f-4910-8689-ad53a7191089.png",
     price: 1850,
     description: "Contemporary statement necklace handcrafted from sustainable bamboo segments and natural black pearls. This eco-friendly piece features five geometric bamboo rectangles alternating with clusters of shimmering dark pearls, creating a stunning contrast. The jute cord adds an earthy touch, making this a perfect accessory for both traditional and modern outfits. Each piece is lightweight, comfortable to wear, and ethically made by tribal artisans.",
     category: "Jewelry",
