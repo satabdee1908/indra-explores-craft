@@ -1,4 +1,3 @@
-
 // This file contains sample data for the Suryodayaa crafts platform
 // In a real application, this would be replaced with data from an API or database
 
@@ -176,7 +175,7 @@ export const artisans = [
   {
     id: "a4",
     name: "Sunita Pujari",
-    image: "https://images.unsplash.com/photo-1620794108219-aedbaded4eea?ixlib=rb-4.0.3&auto=format&fit=crop&w=1374&q=80",
+    image: "",
     location: "Koraput, Odisha",
     craft: "Tribal Jewelry Making",
     bio: "Sunita Pujari is an award-winning artisan from the tribal regions of Koraput who specializes in creating contemporary jewelry using traditional materials. She combines sustainable bamboo, natural fibers, and locally sourced stones to create unique pieces that blend tribal aesthetics with modern designs. Her work supports a community of local women artisans.",
