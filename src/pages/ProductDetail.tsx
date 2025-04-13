@@ -1,4 +1,3 @@
-
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import Layout from "@/components/layout/Layout";
@@ -76,9 +75,9 @@ const ProductDetail = () => {
     );
   }
 
-  // Function to ensure price is below 1500
+  // Function to ensure price is below 5000 for craft products
   const formatPrice = (price: number) => {
-    const displayPrice = price > 1500 ? 900 + (price % 500) : price;
+    const displayPrice = price > 5000 ? 4999 : price;
     return displayPrice.toLocaleString();
   };
 
