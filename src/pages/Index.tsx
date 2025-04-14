@@ -77,7 +77,6 @@ const Index = () => {
                   alt="Jagannath Temple"
                   className="rounded-xl shadow-xl animate-float w-full"
                 />
-                <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-turmeric rounded-lg shadow-lg hidden md:block"></div>
               </div>
               <div className="grid grid-cols-3 gap-4 mt-8">
                 <img
