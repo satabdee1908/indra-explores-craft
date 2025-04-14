@@ -1,8 +1,9 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart } from "lucide-react";
+import { ShoppingCart, CreditCard } from "lucide-react";
 import { useState } from "react";
+import { useToast } from "@/hooks/use-toast";
 
 interface ProductCardProps {
   id: string;
@@ -14,10 +15,16 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardProps) => {
-  // Ensure all prices are below 5000
+  const { toast } = useToast();
   const adjustedPrice = price > 5000 ? 4999 : price;
-  
   const [imageError, setImageError] = useState(false);
+  
+  const handleBuyNow = () => {
+    toast({
+      title: "Coming Soon",
+      description: "Direct payment option will be available soon!",
+    });
+  };
   
   return (
     <div className="group">
@@ -39,11 +46,23 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
         <div className="p-4">
           <h3 className="font-medium text-gray-800 mb-1">{name}</h3>
           <p className="text-xs text-gray-500 mb-2">By {artisan}</p>
-          <div className="flex justify-between items-center">
+          <div className="flex justify-between items-center gap-2">
             <span className="font-semibold text-indigo">₹{adjustedPrice.toLocaleString()}</span>
-            <Button size="sm" variant="outline" className="rounded-full">
-              <ShoppingCart className="h-4 w-4 mr-1" /> Add
-            </Button>
+            <div className="flex gap-2">
+              <Button size="sm" variant="outline" className="rounded-full">
+                <ShoppingCart className="h-4 w-4 mr-1" /> Add
+              </Button>
+              <Button 
+                size="sm" 
+                className="rounded-full bg-terracotta hover:bg-terracotta/90"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleBuyNow();
+                }}
+              >
+                <CreditCard className="h-4 w-4 mr-1" /> Buy
+              </Button>
+            </div>
           </div>
         </div>
       </Link>
