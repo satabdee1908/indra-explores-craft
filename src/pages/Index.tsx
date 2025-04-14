@@ -73,21 +73,38 @@ const Index = () => {
             <div className="lg:w-1/2 mb-8 lg:mb-0">
               <div className="relative">
                 <img
-                  src="https://images.unsplash.com/photo-1497436072909-60f360e1d4b1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2560&q=80"
-                  alt="Artisan crafting"
-                  className="rounded-xl shadow-xl animate-float"
+                  src="/lovable-uploads/28283080-99b2-42a4-b534-be2fdf3a4cc7.png"
+                  alt="Jagannath Temple"
+                  className="rounded-xl shadow-xl animate-float w-full"
                 />
                 <div className="absolute -bottom-6 -right-6 w-40 h-40 bg-turmeric rounded-lg shadow-lg hidden md:block"></div>
+              </div>
+              <div className="grid grid-cols-3 gap-4 mt-8">
+                <img
+                  src="/lovable-uploads/cdab7710-1100-47f2-9034-c8b7578fcd43.png"
+                  alt="Traditional masks"
+                  className="rounded-lg shadow-md h-24 w-full object-cover"
+                />
+                <img
+                  src="/lovable-uploads/9f8211c5-af16-4c53-8fcb-722aa3a60047.png"
+                  alt="Temple stone carvings"
+                  className="rounded-lg shadow-md h-24 w-full object-cover"
+                />
+                <img
+                  src="/lovable-uploads/a40a9e59-eb5f-4910-8689-ad53a7191089.png"
+                  alt="Traditional artwork"
+                  className="rounded-lg shadow-md h-24 w-full object-cover"
+                />
               </div>
             </div>
             
             <div className="lg:w-1/2">
               <h2 className="text-3xl font-bold text-gray-900 mb-4">The Stories Behind Our Crafts</h2>
               <p className="text-gray-700 mb-6">
-                Every piece tells a story of tradition, culture, and craftsmanship passed down through generations. Our platform connects you directly with the artisans, allowing you to experience the rich heritage behind each creation.
+                Rooted in the sacred land of Lord Jagannath, our artisans carry forward centuries-old traditions that have flourished in the temple town of Puri and across Odisha. From the intricate Pattachitra paintings to the timeless Dhokra brass work, each piece embodies the spiritual and cultural heritage of this blessed region.
               </p>
               <p className="text-gray-700 mb-8">
-                By supporting these artisans, you're not just acquiring a beautiful handcrafted item – you're preserving cultural heritage and empowering rural communities across India.
+                Our collection showcases the diverse artistic expressions that have evolved around the Jagannath Temple - from traditional masks that tell stories of deities to stone carvings that mirror ancient temple architecture, and vibrant crafts that celebrate the region's festive spirit.
               </p>
               <Link to="/artisans">
                 <Button className="bg-terracotta hover:bg-terracotta/90">
