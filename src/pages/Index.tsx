@@ -1,4 +1,3 @@
-
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -162,18 +161,18 @@ const Index = () => {
               <div className="flex items-center mb-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
                   <img
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d654956?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1061&q=80"
+                    src="/lovable-uploads/e185eab1-654b-4737-b846-2cbf0d383eab.png"
                     alt="Customer"
                     className="h-full w-full object-cover"
                   />
                 </div>
                 <div>
-                  <h4 className="font-medium">Priya Sharma</h4>
-                  <p className="text-sm text-gray-500">Mumbai</p>
+                  <h4 className="font-medium">Neha Sharma</h4>
+                  <p className="text-sm text-gray-500">Bhubaneswar</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                "The Sambalpuri saree I purchased is absolutely stunning. The craftsmanship is exquisite, and knowing the story behind it makes it even more special."
+                "I was amazed by the intricate Pattachitra painting I purchased. The attention to detail and the vibrant colors truly capture the essence of Odisha's artistic heritage."
               </p>
             </div>
             
@@ -181,18 +180,18 @@ const Index = () => {
               <div className="flex items-center mb-4">
                 <div className="h-12 w-12 rounded-full overflow-hidden mr-4">
                   <img
-                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+                    src="/lovable-uploads/7598f3c9-80d5-4a4d-b63c-71de2d859f68.png"
                     alt="Customer"
                     className="h-full w-full object-cover"
                   />
                 </div>
                 <div>
-                  <h4 className="font-medium">Arjun Mehta</h4>
-                  <p className="text-sm text-gray-500">Bengaluru</p>
+                  <h4 className="font-medium">Rohan Patel</h4>
+                  <p className="text-sm text-gray-500">Mumbai</p>
                 </div>
               </div>
               <p className="text-gray-700">
-                "Our travel experience in Odisha was incredible. The local guides showed us places we would never have discovered on our own, and the homestay experience was authentic and welcoming."
+                "The Dhokra brass elephant I bought is not just a decor piece, but a work of art. It's incredible how these artisans create such detailed pieces using traditional techniques."
               </p>
             </div>
             
