@@ -1,3 +1,4 @@
+
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
@@ -16,10 +17,10 @@ const Index = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-indigo mb-6">
-              Discover India's <span className="text-terracotta">Craft</span> & <span className="text-terracotta">Culture</span>
+              Crafted by <span className="text-terracotta">Tradition</span>. Discovered by <span className="text-terracotta">You</span>.
             </h1>
             <p className="text-lg md:text-xl text-gray-700 mb-8">
-              Connect with authentic artisans, explore their stories, and experience the soul of India through crafts and travel.
+              Shop local. Travel deeper. Celebrate authenticity.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link to="/products">
