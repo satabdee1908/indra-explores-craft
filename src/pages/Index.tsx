@@ -1,10 +1,11 @@
 
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Sparkles } from "lucide-react";
 import Layout from "@/components/layout/Layout";
 import ProductCard from "@/components/product/ProductCard";
 import PackageCard from "@/components/travel/PackageCard";
+import AISuggestionBox from "@/components/ai/AISuggestionBox";
 
 // Sample data
 import { featuredProducts, featuredPackages, artisans } from "@/data/sampleData";
@@ -35,6 +36,22 @@ const Index = () => {
               </Link>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* AI Suggestion Section */}
+      <section className="py-16 bg-gradient-to-b from-white to-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4 flex items-center justify-center gap-2">
+              <Sparkles className="h-8 w-8 text-indigo" />
+              AI Design Assistant
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Upload a photo of your space and let our AI suggest perfect cultural products that match your style
+            </p>
+          </div>
+          <AISuggestionBox />
         </div>
       </section>
 
