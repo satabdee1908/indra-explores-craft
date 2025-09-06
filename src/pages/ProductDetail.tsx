@@ -5,8 +5,9 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useToast } from "@/hooks/use-toast";
-import { Minus, Plus, ShoppingCart, Heart } from "lucide-react";
+import { Minus, Plus, ShoppingCart, Heart, CreditCard } from "lucide-react";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
+import UPIPaymentModal from "@/components/payment/UPIPaymentModal";
 
 // Sample data
 import { allProducts, artisans } from "@/data/sampleData";
@@ -17,6 +18,7 @@ const ProductDetail = () => {
   const [product, setProduct] = useState<any>(null);
   const [loading, setLoading] = useState(true);
   const [quantity, setQuantity] = useState(1);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
 
   useEffect(() => {
     // In a real app, we would fetch from an API
@@ -76,9 +78,13 @@ const ProductDetail = () => {
   }
 
   // Function to ensure price is below 5000 for craft products
-  const formatPrice = (price: number) => {
+  const formatPrice = (price: number): number => {
     const displayPrice = price > 5000 ? 4999 : price;
-    return displayPrice.toLocaleString();
+    return displayPrice;
+  };
+  
+  const formatPriceDisplay = (price: number): string => {
+    return formatPrice(price).toLocaleString();
   };
 
   // Function to determine the origin to display
@@ -117,7 +123,7 @@ const ProductDetail = () => {
                 {product.region}
               </span>
               <h1 className="text-3xl font-bold text-gray-900 mt-2">{product.name}</h1>
-              <p className="text-xl font-medium text-terracotta mt-2">₹{formatPrice(product.price)}</p>
+              <p className="text-xl font-medium text-terracotta mt-2">₹{formatPriceDisplay(product.price)}</p>
               
               {product.stock > 0 ? (
                 <span className="inline-block bg-green-100 text-green-800 px-3 py-1 text-sm font-medium rounded-full mt-2">
@@ -182,6 +188,12 @@ const ProductDetail = () => {
                   onClick={handleAddToCart}
                 >
                   <ShoppingCart className="mr-2 h-5 w-5" /> Add to Cart
+                </Button>
+                <Button 
+                  className="bg-indigo hover:bg-indigo/90 py-6 flex-1"
+                  onClick={() => setShowPaymentModal(true)}
+                >
+                  <CreditCard className="mr-2 h-5 w-5" /> Buy Now
                 </Button>
                 <Button 
                   variant="outline" 
@@ -317,6 +329,16 @@ const ProductDetail = () => {
           </Tabs>
         </div>
       </div>
+      
+      {product && (
+        <UPIPaymentModal
+          isOpen={showPaymentModal}
+          onClose={() => setShowPaymentModal(false)}
+          amount={formatPrice(product.price)}
+          productName={product.name}
+          type="product"
+        />
+      )}
     </Layout>
   );
 };

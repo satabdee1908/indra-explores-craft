@@ -1,14 +1,17 @@
 
 import { useParams } from "react-router-dom";
+import { useState } from "react";
 import Layout from "@/components/layout/Layout";
 import TravelInquiryForm from "@/components/travel/TravelInquiryForm";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { MapPin, Calendar, Clock, Users, Star } from "lucide-react";
+import { MapPin, Calendar, Clock, Users, Star, CreditCard } from "lucide-react";
 import { allPackages } from "@/data/sampleData";
+import UPIPaymentModal from "@/components/payment/UPIPaymentModal";
 
 const TravelDetail = () => {
   const { packageId } = useParams();
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
   const pkg = allPackages.find(p => p.id === packageId);
 
   if (!pkg) {
@@ -47,8 +50,15 @@ const TravelDetail = () => {
                   <Calendar className="h-5 w-5 mr-2" />
                   {pkg.duration}
                 </div>
-                <div className="flex items-center">
+                <div className="flex items-center gap-4">
                   <span className="text-2xl font-bold">₹{pkg.price.toLocaleString()}</span>
+                  <Button 
+                    onClick={() => setShowPaymentModal(true)}
+                    className="bg-white text-terracotta hover:bg-white/90"
+                  >
+                    <CreditCard className="h-4 w-4 mr-2" />
+                    Book Now
+                  </Button>
                 </div>
               </div>
             </div>
@@ -91,6 +101,14 @@ const TravelDetail = () => {
           </div>
         </div>
       </div>
+      
+      <UPIPaymentModal
+        isOpen={showPaymentModal}
+        onClose={() => setShowPaymentModal(false)}
+        amount={pkg.price}
+        productName={pkg.title}
+        type="travel"
+      />
     </Layout>
   );
 };

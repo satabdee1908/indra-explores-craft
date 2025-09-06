@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ShoppingCart, CreditCard } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import UPIPaymentModal from "@/components/payment/UPIPaymentModal";
 
 interface ProductCardProps {
   id: string;
@@ -18,11 +19,16 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
   const { toast } = useToast();
   const adjustedPrice = price > 5000 ? 4999 : price;
   const [imageError, setImageError] = useState(false);
+  const [showPaymentModal, setShowPaymentModal] = useState(false);
   
   const handleBuyNow = () => {
+    setShowPaymentModal(true);
+  };
+
+  const handleAddToCart = () => {
     toast({
-      title: "Coming Soon",
-      description: "Direct payment option will be available soon!",
+      title: "Added to Cart",
+      description: `${name} has been added to your cart.`,
     });
   };
   
@@ -49,7 +55,15 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
           <div className="flex justify-between items-center gap-2">
             <span className="font-semibold text-indigo">₹{adjustedPrice.toLocaleString()}</span>
             <div className="flex gap-2">
-              <Button size="sm" variant="outline" className="rounded-full">
+              <Button 
+                size="sm" 
+                variant="outline" 
+                className="rounded-full"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleAddToCart();
+                }}
+              >
                 <ShoppingCart className="h-4 w-4 mr-1" /> Add
               </Button>
               <Button 
@@ -66,6 +80,14 @@ const ProductCard = ({ id, name, image, price, artisan, region }: ProductCardPro
           </div>
         </div>
       </Link>
+      
+      <UPIPaymentModal
+        isOpen={showPaymentModal}
+        onClose={() => setShowPaymentModal(false)}
+        amount={adjustedPrice}
+        productName={name}
+        type="product"
+      />
     </div>
   );
 };
