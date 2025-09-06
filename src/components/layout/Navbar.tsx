@@ -2,7 +2,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { ShoppingCart, Menu, X } from "lucide-react";
+import { ShoppingCart, Menu, X, Sparkles } from "lucide-react";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -32,6 +32,10 @@ const Navbar = () => {
             </Link>
             <Link to="/travel" className="text-gray-700 hover:text-terracotta transition-colors">
               Travel
+            </Link>
+            <Link to="/ai-assistant" className="text-gray-700 hover:text-terracotta transition-colors flex items-center gap-1">
+              <Sparkles className="h-4 w-4" />
+              AI Assistant
             </Link>
             <Link to="/about" className="text-gray-700 hover:text-terracotta transition-colors">
               About
@@ -70,6 +74,14 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             >
               Travel
+            </Link>
+            <Link 
+              to="/ai-assistant" 
+              className="block px-3 py-2 text-base font-medium text-gray-700 hover:text-terracotta flex items-center gap-2"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              <Sparkles className="h-4 w-4" />
+              AI Assistant
             </Link>
             <Link 
               to="/about" 
