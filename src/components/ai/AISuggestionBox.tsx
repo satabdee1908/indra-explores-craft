@@ -156,28 +156,30 @@ const AISuggestionBox = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto px-4 py-12">
+    <div className="max-w-7xl mx-auto px-4 py-6 sm:py-12">
       <Card className="overflow-hidden">
-        <CardHeader className="bg-gradient-to-r from-indigo to-terracotta text-white">
-          <CardTitle className="text-2xl flex items-center gap-2">
-            <Sparkles className="h-6 w-6" />
+        <CardHeader className="bg-gradient-to-r from-indigo to-terracotta text-white p-4 sm:p-6">
+          <CardTitle className="text-xl sm:text-2xl flex items-center gap-2">
+            <Sparkles className="h-5 w-5 sm:h-6 sm:w-6" />
             AI Cultural Design Assistant
           </CardTitle>
-          <CardDescription className="text-white/90">
+          <CardDescription className="text-white/90 text-sm sm:text-base">
             Get personalized product recommendations for your space
           </CardDescription>
         </CardHeader>
         
-        <CardContent className="p-6">
+        <CardContent className="p-4 sm:p-6">
           <Tabs defaultValue="image" className="w-full">
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="image">
-                <ImageIcon className="h-4 w-4 mr-2" />
-                Upload Room Photo
+              <TabsTrigger value="image" className="text-xs sm:text-sm">
+                <ImageIcon className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">Upload Room Photo</span>
+                <span className="sm:hidden">Upload</span>
               </TabsTrigger>
-              <TabsTrigger value="text">
-                <Send className="h-4 w-4 mr-2" />
-                Describe Your Space
+              <TabsTrigger value="text" className="text-xs sm:text-sm">
+                <Send className="h-3 w-3 sm:h-4 sm:w-4 mr-1 sm:mr-2" />
+                <span className="hidden sm:inline">Describe Your Space</span>
+                <span className="sm:hidden">Describe</span>
               </TabsTrigger>
             </TabsList>
             
@@ -189,8 +191,8 @@ const AISuggestionBox = () => {
                 </p>
                 
                 {!uploadedImage ? (
-                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-8 text-center hover:border-indigo transition-colors">
-                    <Upload className="h-12 w-12 mx-auto mb-4 text-gray-400" />
+                  <div className="border-2 border-dashed border-gray-300 rounded-lg p-4 sm:p-8 text-center hover:border-indigo transition-colors">
+                    <Upload className="h-8 w-8 sm:h-12 sm:w-12 mx-auto mb-2 sm:mb-4 text-gray-400" />
                     <Input
                       id="image-upload"
                       type="file"
@@ -200,7 +202,7 @@ const AISuggestionBox = () => {
                     />
                     <Label
                       htmlFor="image-upload"
-                      className="cursor-pointer text-indigo hover:text-indigo/80"
+                      className="cursor-pointer text-indigo hover:text-indigo/80 text-sm sm:text-base"
                     >
                       Click to upload or drag and drop
                     </Label>
@@ -213,7 +215,7 @@ const AISuggestionBox = () => {
                     <img
                       src={uploadedImage}
                       alt="Uploaded room"
-                      className="w-full h-64 object-cover rounded-lg"
+                      className="w-full h-48 sm:h-64 object-cover rounded-lg"
                     />
                     <Button
                       onClick={removeImage}
@@ -259,13 +261,14 @@ const AISuggestionBox = () => {
               </div>
               
               <div className="flex flex-wrap gap-2">
-                <span className="text-sm text-muted-foreground">Quick options:</span>
+                <span className="text-xs sm:text-sm text-muted-foreground">Quick options:</span>
                 {["Modern living room", "Traditional bedroom", "Minimalist office", "Colorful dining space"].map((option) => (
                   <Button
                     key={option}
                     variant="outline"
                     size="sm"
                     onClick={() => setTextQuery(option)}
+                    className="text-xs sm:text-sm"
                   >
                     {option}
                   </Button>
@@ -294,19 +297,19 @@ const AISuggestionBox = () => {
           
           {/* Results Section */}
           {showResults && suggestions.length > 0 && (
-            <div className="mt-8">
-              <h3 className="text-xl font-semibold mb-4">
+            <div className="mt-6 sm:mt-8">
+              <h3 className="text-lg sm:text-xl font-semibold mb-4">
                 AI-Curated Recommendations for Your Space
               </h3>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6">
                 {suggestions.map(({ product, reason, matchScore }, index) => (
                   <div key={product.id} className="relative">
-                    <div className="absolute -top-2 -right-2 z-10 bg-gradient-to-r from-indigo to-terracotta text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute -top-2 -right-2 z-10 bg-gradient-to-r from-indigo to-terracotta text-white px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm font-medium">
                       {Math.round(matchScore)}% Match
                     </div>
                     <ProductCard {...product} />
-                    <p className="mt-2 text-sm text-muted-foreground italic">
+                    <p className="mt-2 text-xs sm:text-sm text-muted-foreground italic">
                       {reason}
                     </p>
                   </div>
